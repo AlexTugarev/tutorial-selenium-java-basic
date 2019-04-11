@@ -4,9 +4,10 @@ ports:
   - port: 5900
     onOpen: ignore
 tasks:
-- before: sdk use java 11.0.2-open
-  init: >
+- init: >
     mvn install
   command: >
     gp open src/main/java/com/applitools/quickstarts/BasicDemo.java &&
     mvn exec:java
+image:
+    file: .gitpod.dockerfile
